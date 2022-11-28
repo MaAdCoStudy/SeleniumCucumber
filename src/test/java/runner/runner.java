@@ -9,17 +9,16 @@ import pages.BasePage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/features",
+    features = "src/test/resources/features/AEjecutarConRunnerSinTag",
     glue = "steps",
     plugin = { "pretty", "html:target/cucumber-reports"},
-    monochrome = true,
-    tags = "@TradeMe"
+    monochrome = true
 )
+//tags = "@TradeMe"
 
 public class runner {
     @AfterClass
     public static void cleanDriver(){
         BasePage.closeBrowser();
     }
-
 }

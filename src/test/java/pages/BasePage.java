@@ -13,22 +13,19 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class BasePage {
-
     protected static WebDriver driver;
     private static Actions action;
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
   
     static {
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
-        
     }
 
     public BasePage(WebDriver driver){
         BasePage.driver = driver;
-        
     }
 
     public static void navigateTo(String url){
@@ -43,71 +40,70 @@ public class BasePage {
         driver.quit();
     }
 
-    private WebElement Find(String locator){
+    private WebElement find(String locator){
         return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
         //return driver.findElement(By.xpath(locator));
     }
 
     public void clickElement(String locator){
-        Find(locator).click();
+        find(locator).click();
     }
 
     public void submitElement(String locator){
-        Find(locator).submit();
+        find(locator).submit();
     }
 
     public void write(String locator, String textToWrite){
-        Find(locator).clear();
-        Find(locator).sendKeys(textToWrite);
+        find(locator).clear();
+        find(locator).sendKeys(textToWrite);
     }
 
     public int dropdownSize(String locator){
-        Select dropdown = new Select(Find(locator));
+        Select dropdown = new Select(find(locator));
         List<WebElement> dropdownOptions = dropdown.getOptions();
        return dropdownOptions.size();
     }
 
     public void selectFromDropdownByValue(String locator, String valueToSelect){
-        Select dropdown = new Select (Find(locator));
+        Select dropdown = new Select (find(locator));
 
         dropdown.selectByValue(valueToSelect);
     }
 
     public void selectFromDropdownByIndex(String locator, int valueToSelect){
-        Select dropdown = new Select (Find(locator));
+        Select dropdown = new Select (find(locator));
 
         dropdown.selectByIndex(valueToSelect);
     }
 
     public void selectFromDropdownByText(String locator, String valueToSelect){
-        Select dropdown = new Select (Find(locator));
+        Select dropdown = new Select (find(locator));
 
         dropdown.selectByVisibleText(valueToSelect);
     }
 
     public void hoverOverElement(String locator){
-        action.moveToElement(Find(locator));
+        action.moveToElement(find(locator));
     }
 
     public void doubleClick(String locator){
-        action.doubleClick(Find(locator));
+        action.doubleClick(find(locator));
     }
 
     public void rightClick(String locator){
-        action.contextClick(Find(locator));
+        action.contextClick(find(locator));
     }
 
     public String getValueFromTable(String locator, int row, int column){
         String cellINeed = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
 
-        return Find(cellINeed).getText();
+        return find(cellINeed).getText();
     }
 
     public void setValueOnTable(String locator, int row, int column, String stringToSend){
-
         String cellToFill = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
 
-        Find(cellToFill).sendKeys(stringToSend);
+        find(cellToFill).sendKeys(stringToSend);
     }
 
     public void switchToiFrame(int iFrameIndex){
@@ -127,21 +123,21 @@ public class BasePage {
     }
     
     public String textFromElement(String locator){
-        return Find(locator).getText();
+        return find(locator).getText();
     }
 
     public boolean elementEnabled(String locator){
-        return Find(locator).isEnabled();
+        return find(locator).isEnabled();
     }
 
     public boolean elementIsDisplayed(String locator){
         
-        return Find(locator).isDisplayed();
+        return find(locator).isDisplayed();
     }
 
     public boolean elementIsSelected(String locator){
 
-        return Find(locator).isSelected();
+        return find(locator).isSelected();
     }
 
     public List<WebElement> bringMeAllElements(String locator){
@@ -154,8 +150,8 @@ public class BasePage {
     }
 
     public void dragAndDrop(String locator, String locator2){
-        WebElement element = Find(locator);
-        WebElement element2 = Find(locator2);
+        WebElement element = find(locator);
+        WebElement element2 = find(locator2);
         action.dragAndDrop(element, element2).build().perform();
     }
 
@@ -167,6 +163,5 @@ public class BasePage {
                 break;
             }
         }
-    }
-    
+    }   
 }

@@ -6,9 +6,7 @@ import io.cucumber.java.en.*;
 import pages.GooglePage;
 
 public class GoogleSteps {
-
     GooglePage google = new GooglePage();
-
 
     @Given("^I am on the Google search page$")
     public void navigateToGoogle(){
@@ -29,5 +27,4 @@ public class GoogleSteps {
     public void validateResults(){
         Assert.assertEquals("Texto que Esperamos", google.firstResult());
     }
-
 }
