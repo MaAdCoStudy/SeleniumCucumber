@@ -6,7 +6,6 @@ import io.cucumber.java.en.*;
 import pages.AmazonSearchPage;
 
 public class AmazonSearchSteps {
-
     AmazonSearchPage amazon = new AmazonSearchPage();
 
     @Given("^the user navigates to www.amazon.com$")

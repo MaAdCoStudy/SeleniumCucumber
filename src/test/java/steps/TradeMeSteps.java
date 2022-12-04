@@ -12,7 +12,6 @@ import static io.restassured.RestAssured.*;
 import java.util.List;
 
 public class TradeMeSteps {
-
     private ValidatableResponse json;
     private static RequestSpecification request;
     private Response response;

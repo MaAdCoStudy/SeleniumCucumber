@@ -9,12 +9,12 @@ import pages.BasePage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/features/AEjecutarConRunnerSinTag",
+    features = "src/test/resources/features",
     glue = "steps",
     plugin = { "pretty", "html:target/cucumber-reports"},
-    monochrome = true
+    monochrome = true,
+    tags = "@Grid"
 )
-//tags = "@TradeMe"
 
 public class runner {
     @AfterClass

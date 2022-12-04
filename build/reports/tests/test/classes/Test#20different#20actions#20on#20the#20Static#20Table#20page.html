@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Test different actions on the Static Table page</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Test different actions on the Static Table page</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Test different actions on the Static Table page</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">49.507s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="As a Test Engineer, I want to retrieve the value of an static table."></a>
+<h3 class="failures">As a Test Engineer, I want to retrieve the value of an static table.</h3>
+<span class="code">
+<pre>org.junit.ComparisonFailure: expected:&lt;r: [1, c: 0]&gt; but was:&lt;r: [2, c: 1]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.GridTestSteps.returnValue(GridTestSteps.java:20)
+	at ✽.I can return the value I wanted(file:///D:/Users/Matias/Documents/NUEVOS%20LENGUAJES%20Y%20HERRAMIENTAS/Cucumber/Selenium%20con%20Java%20y%20Cucumber/SeleniumCucumber/src/test/resources/features/StaticTableTests.feature:11)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">As a Test Engineer, I want to retrieve the value of an static table.</td>
+<td class="failures">41.845s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">As a Test Engineer, I want to validate the static table is displayed.</td>
+<td class="success">7.662s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+@Grid @Smoke @Regression
+Scenario: As a Test Engineer, I want to retrieve the value of an static table. # src/test/resources/features/StaticTableTests.feature:10
+  Given I navigate to the static table                                         # steps.GridTestSteps.navigateToGridPage()
+  Then I can return the value I wanted                                         # steps.GridTestSteps.returnValue()
+      org.junit.ComparisonFailure: expected:&lt;r: [1, c: 0]&gt; but was:&lt;r: [2, c: 1]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.GridTestSteps.returnValue(GridTestSteps.java:20)
+	at âœ½.I can return the value I wanted(file:///D:/Users/Matias/Documents/NUEVOS%20LENGUAJES%20Y%20HERRAMIENTAS/Cucumber/Selenium%20con%20Java%20y%20Cucumber/SeleniumCucumber/src/test/resources/features/StaticTableTests.feature:11)
+
+
+    Scenario fallando, referirse a la imagen adjunta.
+
+
+    Embedding Screenshot of the error [image/png 21482 bytes]
+
+
+@Grid @Regression
+Scenario: As a Test Engineer, I want to validate the static table is displayed. # src/test/resources/features/StaticTableTests.feature:14
+  Given I navigate to the static table                                          # steps.GridTestSteps.navigateToGridPage()
+  Then I can validate the table is displayed                                    # steps.GridTestSteps.theTableIsThere()
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 63777
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 04, 2022 7:49:56 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 107, so returning the closest version found: a no-op implementation
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 107.
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.0.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at Dec 4, 2022, 7:50:26 AM</p>
+</div>
+</div>
+</body>
+</html>

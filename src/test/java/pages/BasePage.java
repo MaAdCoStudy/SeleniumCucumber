@@ -116,7 +116,7 @@ public class BasePage {
 
     public void dismissAlert(){
         try{
-        driver.switchTo().alert().dismiss();
+            driver.switchTo().alert().dismiss();
         }catch(NoAlertPresentException e){
             e.printStackTrace();
         }
@@ -131,12 +131,10 @@ public class BasePage {
     }
 
     public boolean elementIsDisplayed(String locator){
-        
         return find(locator).isDisplayed();
     }
 
     public boolean elementIsSelected(String locator){
-
         return find(locator).isSelected();
     }
 

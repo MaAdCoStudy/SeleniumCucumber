@@ -1,7 +1,6 @@
 package pages;
 
 public class GridPage extends BasePage {
-
     private String cell = "//*[@id='root']/div/";
     private String mainTable = "//*[@id='root']/div/table";
     private String allCellsInTable = "//tbody/tr";
@@ -21,5 +20,4 @@ public class GridPage extends BasePage {
     public boolean cellStatus(){
         return elementIsDisplayed(mainTable);
     }
-
 }

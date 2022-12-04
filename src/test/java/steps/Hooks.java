@@ -8,7 +8,6 @@ import io.cucumber.java.Scenario;
 import pages.BasePage;
 
 public class Hooks extends BasePage{
-
     public Hooks() {
         super(driver);
     }

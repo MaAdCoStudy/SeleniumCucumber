@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test different actions on the Static Table page" tests="2" skipped="0" failures="1" errors="0" timestamp="2022-12-04T10:49:28" hostname="MATIAS-PC" time="49.507">
+  <properties/>
+  <testcase name="As a Test Engineer, I want to retrieve the value of an static table." classname="Test different actions on the Static Table page" time="41.845">
+    <failure message="org.junit.ComparisonFailure: expected:&lt;r: [1, c: 0]&gt; but was:&lt;r: [2, c: 1]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;r: [1, c: 0]&gt; but was:&lt;r: [2, c: 1]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.GridTestSteps.returnValue(GridTestSteps.java:20)
+	at ✽.I can return the value I wanted(file:///D:/Users/Matias/Documents/NUEVOS%20LENGUAJES%20Y%20HERRAMIENTAS/Cucumber/Selenium%20con%20Java%20y%20Cucumber/SeleniumCucumber/src/test/resources/features/StaticTableTests.feature:11)
+</failure>
+  </testcase>
+  <testcase name="As a Test Engineer, I want to validate the static table is displayed." classname="Test different actions on the Static Table page" time="7.662"/>
+  <system-out><![CDATA[
+@Grid @Smoke @Regression
+Scenario: As a Test Engineer, I want to retrieve the value of an static table. # src/test/resources/features/StaticTableTests.feature:10
+  Given I navigate to the static table                                         # steps.GridTestSteps.navigateToGridPage()
+  Then I can return the value I wanted                                         # steps.GridTestSteps.returnValue()
+      org.junit.ComparisonFailure: expected:<r: [1, c: 0]> but was:<r: [2, c: 1]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at steps.GridTestSteps.returnValue(GridTestSteps.java:20)
+	at âœ½.I can return the value I wanted(file:///D:/Users/Matias/Documents/NUEVOS%20LENGUAJES%20Y%20HERRAMIENTAS/Cucumber/Selenium%20con%20Java%20y%20Cucumber/SeleniumCucumber/src/test/resources/features/StaticTableTests.feature:11)
+
+
+    Scenario fallando, referirse a la imagen adjunta.
+
+
+    Embedding Screenshot of the error [image/png 21482 bytes]
+
+
+@Grid @Regression
+Scenario: As a Test Engineer, I want to validate the static table is displayed. # src/test/resources/features/StaticTableTests.feature:14
+  Given I navigate to the static table                                          # steps.GridTestSteps.navigateToGridPage()
+  Then I can validate the table is displayed                                    # steps.GridTestSteps.theTableIsThere()
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 107.0.5304.62 (1eec40d3a5764881c92085aaee66d25075c159aa-refs/branch-heads/5304@{#942}) on port 63777
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Dec 04, 2022 7:49:56 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 107, so returning the closest version found: a no-op implementation
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 107.
+Dec 04, 2022 7:49:57 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.0.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
